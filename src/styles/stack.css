@@ -1,0 +1,91 @@
+/* ============================================
+   INNOVATEK — Stack Section Styles
+   ============================================ */
+
+.stack {
+  background: var(--color-bg-primary);
+  padding: var(--space-4xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stack__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xl) var(--space-4xl);
+  margin-top: var(--space-3xl);
+}
+
+.stack__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  transition: var(--transition-spring);
+  filter: grayscale(1) opacity(0.6);
+}
+
+.stack__item:hover {
+  filter: grayscale(0) opacity(1);
+  transform: translateY(-8px);
+}
+
+.stack__icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(148, 163, 184, 0.4); /* Muted grayscale by default */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  transition: var(--transition-base);
+}
+
+.stack__item:hover .stack__icon {
+  background-color: var(--glow-color, var(--color-accent-blue));
+  filter: drop-shadow(0 0 10px var(--glow-color, var(--color-accent-blue)));
+}
+
+.stack__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: var(--transition-base);
+}
+
+.stack__item:hover .stack__name {
+  color: var(--color-text-primary);
+}
+
+/* Specific Glow Colors */
+.stack__item[data-tech="n8n"] { --glow-color: #ff6d5a; }
+.stack__item[data-tech="python"] { --glow-color: #3776ab; }
+.stack__item[data-tech="js"] { --glow-color: #f7df1e; }
+.stack__item[data-tech="react"] { --glow-color: #61dafb; }
+.stack__item[data-tech="postgresql"] { --glow-color: #336791; }
+.stack__item[data-tech="openai"] { --glow-color: #ffffff; }
+.stack__item[data-tech="google"] { --glow-color: #4285f4; }
+.stack__item[data-tech="openrouter"] { --glow-color: #6d58ff; }
+.stack__item[data-tech="node"] { --glow-color: #339933; }
+.stack__item[data-tech="docker"] { --glow-color: #2496ed; }
+.stack__item[data-tech="wordpress"] { --glow-color: #21759b; }
+.stack__item[data-tech="php"] { --glow-color: #777bb4; }
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .stack__grid {
+    gap: var(--space-xl) var(--space-2xl);
+  }
+  .stack__icon {
+    width: 48px;
+    height: 48px;
+  }
+}

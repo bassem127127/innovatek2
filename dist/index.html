@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovatek — Solutions Informatiques & IA en Tunisie</title>
+  <meta name="description"
+    content="Entreprise informatique en Tunisie spécialisée dans le développement logiciel sur mesure, l'automatisation intelligente et les solutions d'intelligence artificielle." />
+  <meta property="og:title" content="Innovatek — Solutions Informatiques & IA en Tunisie" />
+  <meta property="og:description"
+    content="Entreprise informatique en Tunisie spécialisée dans le développement logiciel sur mesure, l'automatisation intelligente et les solutions d'intelligence artificielle." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://innovatek.netlify.app/" />
+  <meta property="og:image" content="https://i.ibb.co/Ldg0BLKY/696941058-26585596551133016-6074736400980204959-n-removebg-preview.png" />
+  <meta property="og:site_name" content="Innovatek" />
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://innovatek.netlify.app/" />
+  <meta name="twitter:title" content="Innovatek — Solutions Informatiques & IA en Tunisie" />
+  <meta name="twitter:description" content="Entreprise informatique en Tunisie spécialisée dans le développement logiciel sur mesure, l'automatisation intelligente et les solutions d'intelligence artificielle." />
+  <meta name="twitter:image" content="https://i.ibb.co/Ldg0BLKY/696941058-26585596551133016-6074736400980204959-n-removebg-preview.png" />
+
+  <link rel="canonical" href="https://innovatek.netlify.app/" />
+  <meta name="google-site-verification" content="google74ffa9f79e8e4270" />
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Innovatek",fdfdf
+      "alternateName": "Innovatek Tunisia",
+      "url": "https://innovatek.netlify.app/",
+      "logo": "https://i.ibb.co/Ldg0BLKY/696941058-26585596551133016-6074736400980204959-n-removebg-preview.png",
+      "description": "Innovatek conçoit des solutions d'automatisation IA sur mesure, des agents intelligents, et des applications sur mesure pour propulser votre entreprise.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TN",
+        "addressLocality": "Tunis"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+21653052134",
+        "contactType": "sales",
+        "areaServed": "Worldwide"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61589239216614",
+        "https://www.linkedin.com/company/innovatek-tunisia/about/?viewAsMember=true"
+      ]
+    }
+  </script>
+  <link rel="icon" type="image/png"
+    href="https://i.ibb.co/Ldg0BLKY/696941058-26585596551133016-6074736400980204959-n-removebg-preview.png" />
+  <style>
+    /* Critical Loader Styles */
+    :root {
+      --loader-bg: #0a0e1a;
+      --loader-accent: #00f0ff;
+    }
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--loader-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1), visibility 0.6s;
+      overflow: hidden;
+    }
+
+    .loader--hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .loader__visual {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader__ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(0, 240, 255, 0.1);
+      border-top-color: var(--loader-accent);
+      border-radius: 50%;
+      animation: loader-spin 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+
+    .loader__ring--outer {
+      width: 140%;
+      height: 140%;
+      border: 1px solid rgba(0, 240, 255, 0.05);
+      border-bottom-color: rgba(0, 240, 255, 0.3);
+      animation: loader-spin 3s linear infinite reverse;
+    }
+
+    .loader__logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.5));
+      animation: loader-pulse 2s ease-in-out infinite;
+    }
+
+    .loader__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .loader__text {
+      color: var(--loader-accent);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .loader__progress {
+      width: 180px;
+      height: 2px;
+      background: rgba(0, 240, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .loader__progress-bar {
+      width: 100%;
+      height: 100%;
+      background: var(--loader-accent);
+      transform-origin: left;
+      animation: loader-progress 3s ease-in-out infinite;
+    }
+
+    @keyframes loader-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes loader-pulse {
+
+      0%,
+      100% {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes loader-progress {
+      0% {
+        transform: scaleX(0);
+      }
+
+      50% {
+        transform: scaleX(0.7);
+      }
+
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index--5y7oYN3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CKMQeVOg.css">
+</head>
+
+<body>
+  <!-- ========== PRELOADER ========== -->
+  <div id="loader" class="loader">
+    <div class="loader__content">
+      <div class="loader__visual">
+        <div class="loader__ring"></div>
+        <div class="loader__ring loader__ring--outer"></div>
+        <img src="https://i.ibb.co/Ldg0BLKY/696941058-26585596551133016-6074736400980204959-n-removebg-preview.png"
+          alt="Innovatek Logo" class="loader__logo">
+      </div>
+      <div class="loader__text-wrapper">
+        <div class="loader__text" id="loader-text">Initializing Systems...</div>
+        <div class="loader__progress">
+          <div class="loader__progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Immediate loader text update
+    const loaderText = document.getElementById('loader-text');
+    const messages = [
+      'Synchronizing neural networks...',
+      'Optimizing automation workflows...',
+      'Booting AI core...',
+      'Finalizing deployment...'
+    ];
+    let msgIndex = 0;
+    const interval = setInterval(() => {
+      if (msgIndex < messages.length) {
+        loaderText.textContent = messages[msgIndex];
+        msgIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 800);
+  </script>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <img src="https://i.ibb.co/gLVzgM6M/logo-vectorielle.png" alt="Innovatek Logo" class="navbar__logo-img">
+      </a>
+
+      <div class="navbar__links" id="nav-links">
+        <a href="#hero" class="navbar__link active" data-i18n="nav_home">Accueil</a>
+        <a href="#services" class="navbar__link" data-i18n="nav_services">Services</a>
+        <a href="#process" class="navbar__link" data-i18n="nav_process">Processus</a>
+        <a href="#about" class="navbar__link" data-i18n="nav_about">À propos</a>
+        <a href="#contact" class="navbar__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switch">
+          <button class="lang-switch__btn active" data-lang="fr">FR</button>
+          <button class="lang-switch__btn" data-lang="en">EN</button>
+          <button class="lang-switch__btn" data-lang="ar">AR</button>
+        </div>
+        <a href="#contact" class="navbar__cta" data-i18n="nav_cta">Commencer</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu" data-i18n="aria_nav_toggle">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas"></canvas>
+    <div class="hero__grid-bg"></div>
+
+    <div class="hero__inner">
+      <!-- LEFT: Text -->
+      <div class="hero__content">
+        <div class="hero__badge reveal" data-i18n="hero_badge">
+          <span class="hero__badge-dot"></span>
+          Innovations propulsées par l'IA
+        </div>
+
+        <h1 class="hero__title reveal">
+          <span class="hero__title-line hero__title-line--outline" data-i18n="hero_title_1">Automatisez.</span>
+          <span class="hero__title-line"><span class="hero__title-highlight"
+              data-i18n="hero_title_2">Accélérez.</span></span>
+          <span class="hero__title-line" data-i18n="hero_title_3">Dominez.</span>
+        </h1>
+
+        <p class="hero__subtitle reveal" data-i18n="hero_subtitle">
+          Nous concevons des systèmes d'automatisation intelligents et des applications IA qui remplacent les tâches
+          manuelles, réduisent les coûts et débloquent une croissance exponentielle pour votre entreprise.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#services" class="btn-primary">
+            <span data-i18n="hero_cta_primary">Explorer nos solutions</span>
+            <svg class="rtl-flip" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn-ghost" data-i18n="hero_cta_secondary">
+            <svg class="rtl-flip" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
+            Nous contacter
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Visual -->
+      <div class="hero__visual reveal-right">
+        <div class="hero__orb">
+          <div class="hero__orb-rings">
+            <div class="hero__orb-ring hero__orb-ring--1"></div>
+            <div class="hero__orb-ring hero__orb-ring--2"></div>
+            <div class="hero__orb-ring hero__orb-ring--3"></div>
+            <div class="hero__orb-ring hero__orb-ring--eq"></div>
+          </div>
+          <div class="hero__orb-core"></div>
+          <div class="hero__orb-pulse"></div>
+          <div class="hero__orb-pulse hero__orb-pulse--delayed"></div>
+        </div>
+
+        <div class="hero__tag hero__tag--1">
+          <span class="hero__tag-dot"></span>
+          <span data-i18n="hero_tag_1">Neural Agents</span>
+        </div>
+        <div class="hero__tag hero__tag--2">
+          <span class="hero__tag-dot" style="background:var(--color-accent-violet)"></span>
+          <span data-i18n="hero_tag_2">AI Workflows</span>
+        </div>
+        <div class="hero__tag hero__tag--3">
+          <span class="hero__tag-dot" style="background:var(--color-accent-coral)"></span>
+          <span data-i18n="hero_tag_3">Automation</span>
+        </div>
+        <div class="hero__tag hero__tag--4">
+          <span class="hero__tag-dot" style="background:var(--color-accent-emerald)"></span>
+          <span data-i18n="hero_tag_4">Apps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label reveal" data-i18n="services_label">Ce que nous faisons</span>
+        <h2 class="section__title reveal"><span data-i18n="services_title">Solutions intelligentes pour entreprises
+            modernes</span></h2>
+        <p class="section__description reveal" data-i18n="services_desc">Nous combinons l'IA de pointe avec une
+          expertise sectorielle approfondie pour offrir des solutions d'automatisation à fort impact.</p>
+      </div>
+
+      <div class="services__grid stagger-children">
+        <!-- Card 1: AI Workflow Automation -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_1_title">Automatisation de Workflow IA</h3>
+          <p class="service-card__description" data-i18n="service_1_desc">Automatisation de bout en bout des processus
+            métier répétitifs. De la saisie de données aux chaînes de décision complexes.</p>
+        </div>
+
+        <!-- Card 2: Intelligent Chatbots -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_2_title">Agents & Chatbots Intelligents</h3>
+          <p class="service-card__description" data-i18n="service_2_desc">IA conversationnelle personnalisée pour le
+            support client, la qualification de leads et les opérations internes 24/7.</p>
+        </div>
+
+        <!-- Card 3: AI-Powered Apps -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_3_title">Applications propulsées par l'IA</h3>
+          <p class="service-card__description" data-i18n="service_3_desc">Applications intelligentes avec apprentissage
+            automatique intégré qui s'adaptent et s'améliorent continuellement.</p>
+        </div>
+
+        <!-- Card 4: Data Analytics -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18" />
+              <path d="m19 9-5 5-4-4-3 3" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_4_title">Analyses de Données & Insights</h3>
+          <p class="service-card__description" data-i18n="service_4_desc">Tableaux de bord prédictifs et pipelines de
+            données intelligents pour transformer les données brutes en intelligence métier.</p>
+        </div>
+
+        <!-- Card 5: System Integration -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_5_title">Intégration de Systèmes</h3>
+          <p class="service-card__description" data-i18n="service_5_desc">Connectez vos outils, CRM et plateformes avec
+            des couches d'IA intelligentes pour des opérations unifiées.</p>
+        </div>
+
+        <!-- Card 6: Custom AI Development -->
+        <div class="service-card reveal">
+          <div class="service-card__glow"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="service_6_title">Développement IA sur mesure</h3>
+          <p class="service-card__description" data-i18n="service_6_desc">Modèles d'apprentissage automatique et
+            solutions IA sur mesure pour vos défis métier uniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label reveal" data-i18n="process_label">Notre méthode</span>
+        <h2 class="section__title reveal" data-i18n="process_title">De l'idée à l'impact</h2>
+        <p class="section__description reveal" data-i18n="process_desc">Notre méthodologie en 4 étapes garantit que
+          chaque projet délivre une valeur maximale.</p>
+      </div>
+
+      <div class="process__path">
+        <!-- Step 1 -->
+        <div class="process__item reveal-left">
+          <div class="process__node">
+            <div class="process__node-inner">01</div>
+            <div class="process__node-glow"></div>
+          </div>
+          <div class="process__card">
+            <div class="process__card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </div>
+            <h3 class="process__step-title" data-i18n="process_step_1_title">Découverte</h3>
+            <p class="process__step-description" data-i18n="process_step_1_desc">Nous analysons vos flux de travail et
+              identifions les opportunités d'automatisation.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process__item process__item--reverse reveal-right">
+          <div class="process__node">
+            <div class="process__node-inner">02</div>
+            <div class="process__node-glow"></div>
+          </div>
+          <div class="process__card">
+            <div class="process__card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </div>
+            <h3 class="process__step-title" data-i18n="process_step_2_title">Conception</h3>
+            <p class="process__step-description" data-i18n="process_step_2_desc">Nous concevons la solution IA optimale
+              — choix des modèles, intégrations et flux de données.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process__item reveal-left">
+          <div class="process__node">
+            <div class="process__node-inner">03</div>
+            <div class="process__node-glow"></div>
+          </div>
+          <div class="process__card">
+            <div class="process__card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h3 class="process__step-title" data-i18n="process_step_3_title">Construction</h3>
+            <p class="process__step-description" data-i18n="process_step_3_desc">Développement agile avec retours
+              clients continus pour une itération rapide.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process__item process__item--reverse reveal-right">
+          <div class="process__node">
+            <div class="process__node-inner">04</div>
+            <div class="process__node-glow"></div>
+          </div>
+          <div class="process__card">
+            <div class="process__card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3 class="process__step-title" data-i18n="process_step_4_title">Déploiement</h3>
+            <p class="process__step-description" data-i18n="process_step_4_desc">Lancement, surveillance des
+              performances et optimisation continue pour la croissance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content reveal-left">
+          <span class="section__label" data-i18n="about_label">Pourquoi Innovatek</span>
+          <h2 class="section__title" style="text-align:left;" data-i18n="about_title">Nous ne construisons pas seulement
+            de l'IA — Nous bâtissons des résultats</h2>
+
+          <p class="about__mission" data-i18n="about_mission">
+            Chez Innovatek, l'IA est une infrastructure invisible. Notre mission est d'automatiser silencieusement pour
+            que votre équipe se concentre sur l'essentiel.
+          </p>
+
+          <div class="about__pillars">
+            <div class="about__pillar">
+              <div class="about__pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about__pillar-title" data-i18n="about_pillar_1_title">Vitesse</h3>
+                <p class="about__pillar-text" data-i18n="about_pillar_1_text">Prototypage rapide et livraison agile.
+                  Nous avançons vite sans compromettre la qualité.</p>
+              </div>
+            </div>
+
+            <div class="about__pillar">
+              <div class="about__pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about__pillar-title" data-i18n="about_pillar_2_title">Intelligence</h3>
+                <p class="about__pillar-text" data-i18n="about_pillar_2_text">Chaque solution repose sur une expertise
+                  ML profonde et des décisions basées sur les données.</p>
+              </div>
+            </div>
+
+            <div class="about__pillar">
+              <div class="about__pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about__pillar-title" data-i18n="about_pillar_3_title">Fiabilité</h3>
+                <p class="about__pillar-text" data-i18n="about_pillar_3_text">Systèmes de classe entreprise conçus pour
+                  la disponibilité, la sécurité et l'évolutivité.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__visual reveal-right">
+          <div class="about__visual-orb"></div>
+
+          <div class="about__dashboard">
+            <div class="about__dashboard-header">
+              <div class="about__dashboard-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="about__dashboard-title">System Status: Active</div>
+            </div>
+            <div class="about__dashboard-body">
+              <div class="about__stat-row">
+                <div class="about__stat-info">
+                  <span>Neural Efficiency</span>
+                  <span>98.4%</span>
+                </div>
+                <div class="about__stat-bar">
+                  <div class="about__stat-fill" style="width: 98.4%"></div>
+                </div>
+              </div>
+              <div class="about__stat-row">
+                <div class="about__stat-info">
+                  <span>Process Automation</span>
+                  <span>100%</span>
+                </div>
+                <div class="about__stat-bar">
+                  <div class="about__stat-fill" style="width: 100%; background: var(--color-accent-emerald)"></div>
+                </div>
+              </div>
+              <div class="about__stat-row">
+                <div class="about__stat-info">
+                  <span>Response Latency</span>
+                  <span>12ms</span>
+                </div>
+                <div class="about__stat-bar">
+                  <div class="about__stat-fill" style="width: 15%; background: var(--color-accent-cyan)"></div>
+                </div>
+              </div>
+
+              <div class="about__dashboard-code">
+                <code>> initializing_core... [OK]</code>
+                <code>> optimization_engaged... [TRUE]</code>
+                <code>> business_growth_unlocked</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STACK ========== -->
+  <section class="stack section" id="stack">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label reveal" data-i18n="stack_label">Notre Arsenal</span>
+        <h2 class="section__title reveal" data-i18n="stack_title">Technologies de Pointe</h2>
+      </div>
+
+      <div class="stack__grid">
+        <!-- n8n -->
+        <div class="stack__item reveal" data-tech="n8n">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/n8n.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/n8n.svg');">
+          </div>
+          <span class="stack__name">n8n</span>
+        </div>
+
+        <!-- Python -->
+        <div class="stack__item reveal" data-tech="python">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/python.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/python.svg');">
+          </div>
+          <span class="stack__name">Python</span>
+        </div>
+
+        <!-- JS -->
+        <div class="stack__item reveal" data-tech="js">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/javascript.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/javascript.svg');">
+          </div>
+          <span class="stack__name">JavaScript</span>
+        </div>
+
+        <!-- React -->
+        <div class="stack__item reveal" data-tech="react">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/react.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/react.svg');">
+          </div>
+          <span class="stack__name">React</span>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="stack__item reveal" data-tech="postgresql">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/postgresql.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/postgresql.svg');">
+          </div>
+          <span class="stack__name">PostgreSQL</span>
+        </div>
+
+        <!-- OpenAI -->
+        <div class="stack__item reveal" data-tech="openai">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/openai.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/openai.svg');">
+          </div>
+          <span class="stack__name">OpenAI</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="stack__item reveal" data-tech="node">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/nodedotjs.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/nodedotjs.svg');">
+          </div>
+          <span class="stack__name">Node.js</span>
+        </div>
+
+        <!-- Google AI Studio -->
+        <div class="stack__item reveal" data-tech="google">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/googlegemini.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/googlegemini.svg');">
+          </div>
+          <span class="stack__name">Google AI</span>
+        </div>
+
+        <!-- OpenRouter -->
+        <div class="stack__item reveal" data-tech="openrouter">
+          <div class="stack__icon"
+            style="mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path d=%22M16.778 1.844v1.919q-.569-.026-1.138-.032-.708-.008-1.415.037c-1.93.126-4.023.728-6.149 2.237-2.911 2.066-2.731 1.95-4.14 2.75-.396.223-1.342.574-2.185.798-.841.225-1.753.333-1.751.333v4.229s.768.108 1.61.333c.842.224 1.789.575 2.185.799 1.41.798 1.228.683 4.14 2.75 2.126 1.509 4.22 2.11 6.148 2.236.88.058 1.716.041 2.555.005v1.918l7.222-4.168-7.222-4.17v2.176c-.86.038-1.611.065-2.278.021-1.364-.09-2.417-.357-3.979-1.465-2.244-1.593-2.866-2.027-3.68-2.508.889-.518 1.449-.906 3.822-2.59 1.56-1.109 2.614-1.377 3.978-1.466.667-.044 1.418-.017 2.278.02v2.176L24 6.014Z%22/></svg>'); -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path d=%22M16.778 1.844v1.919q-.569-.026-1.138-.032-.708-.008-1.415.037c-1.93.126-4.023.728-6.149 2.237-2.911 2.066-2.731 1.95-4.14 2.75-.396.223-1.342.574-2.185.798-.841.225-1.753.333-1.751.333v4.229s.768.108 1.61.333c.842.224 1.789.575 2.185.799 1.41.798 1.228.683 4.14 2.75 2.126 1.509 4.22 2.11 6.148 2.236.88.058 1.716.041 2.555.005v1.918l7.222-4.168-7.222-4.17v2.176c-.86.038-1.611.065-2.278.021-1.364-.09-2.417-.357-3.979-1.465-2.244-1.593-2.866-2.027-3.68-2.508.889-.518 1.449-.906 3.822-2.59 1.56-1.109 2.614-1.377 3.978-1.466.667-.044 1.418-.017 2.278.02v2.176L24 6.014Z%22/></svg>');">
+          </div>
+          <span class="stack__name">OpenRouter</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="stack__item reveal" data-tech="docker">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/docker.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/docker.svg');">
+          </div>
+          <span class="stack__name">Docker</span>
+        </div>
+
+        <!-- WordPress -->
+        <div class="stack__item reveal" data-tech="wordpress">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/wordpress.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/wordpress.svg');">
+          </div>
+          <span class="stack__name">WordPress</span>
+        </div>
+
+        <!-- PHP -->
+        <div class="stack__item reveal" data-tech="php">
+          <div class="stack__icon"
+            style="mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/php.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/php.svg');">
+          </div>
+          <span class="stack__name">PHP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact section" id="contact">
+    <div class="contact__grid-lines"></div>
+    <div class="container">
+      <div class="contact__inner">
+        <!-- LEFT: Content -->
+        <div class="contact__info reveal-left">
+          <span class="section__label" data-i18n="nav_contact">Contact</span>
+          <h2 class="contact__cta-title reveal"><span data-i18n="contact_title">Prêt à transformer votre entreprise
+              ?</span></h2>
+          <p class="contact__cta-text reveal" data-i18n="contact_text">
+            Parlez-nous de vos défis. Nous vous montrerons comment l'IA peut les résoudre — consultation gratuite.
+          </p>
+
+          <div class="contact__details stagger-children">
+            <div class="contact__detail reveal">
+              <div class="contact__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="contact__detail-content">
+                <span class="contact__detail-label">Location</span>
+                <span class="contact__detail-value" data-i18n="contact_location">Remote-First — Partout dans le
+                  monde</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact__form-container reveal-right">
+          <form class="contact__form" id="contact-form">
+            <!-- SplitForms Configuration -->
+            <input type="hidden" name="access_key" value="f66f51abba8545059d8a1fb5a98cee5a">
+            <input type="hidden" name="subject" value="New Innovatek Lead">
+            <!-- Honeypot for spam bots -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label class="form-group__label" for="contact-name" data-i18n="contact_label_name">Nom complet</label>
+              <input class="form-group__input" type="text" id="contact-name" name="name"
+                data-i18n-placeholder="contact_placeholder_name" placeholder="Jean Dupont" required minlength="2">
+              <span class="form-group__error" data-i18n="contact_error_name">Veuillez entrer votre nom (min. 2
+                caractères).</span>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="contact-email" data-i18n="contact_label_email">Adresse
+                e-mail</label>
+              <input class="form-group__input" type="email" id="contact-email" name="email"
+                data-i18n-placeholder="contact_placeholder_email" placeholder="jean@entreprise.com" required>
+              <span class="form-group__error" data-i18n="contact_error_email">Veuillez entrer une adresse e-mail
+                valide.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="contact-message" data-i18n="contact_label_message">Message</label>
+              <textarea class="form-group__textarea" id="contact-message" name="message"
+                data-i18n-placeholder="contact_placeholder_message" placeholder="Parlez-nous de votre projet..."
+                required minlength="10"></textarea>
+              <span class="form-group__error" data-i18n="contact_error_message">Veuillez entrer un message (min. 10
+                caractères).</span>
+            </div>
+            <button class="contact__submit btn-primary" type="submit">
+              <span data-i18n="contact_submit">Envoyer le message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z" />
+                <path d="M22 2 11 13" />
+              </svg>
+            </button>
+            <p class="contact__form-footer">
+              Powered by <a href="https://splitforms.com" target="_blank" rel="noopener">splitforms</a>
+            </p>
+          </form>
+
+          <!-- Success Message -->
+          <div class="contact__success" id="contact-success">
+            <div class="contact__success-visual">
+              <div class="contact__success-ring"></div>
+              <div class="contact__success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="contact__success-title" data-i18n="contact_success_title">Message envoyé !</h3>
+            <p class="contact__success-text" data-i18n="contact_success_text">Merci de nous avoir contactés. Nous vous
+              répondrons sous 24h.</p>
+            <button type="button" class="btn-ghost contact__success-reset" id="form-reset">
+              <span data-i18n="contact_reset">Envoyer un autre</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="https://i.ibb.co/gLVzgM6M/logo-vectorielle.png" alt="Innovatek Logo" class="footer__logo-img">
+      </div>
+
+      <p class="footer__copy" data-i18n="footer_copy">© 2026 Innovatek 🇹🇳 Tous droits réservés.</p>
+
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/profile.php?id=61589239216614" class="footer__social-link"
+          aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/innovatek-tunisia/about/?viewAsMember=true"
+          class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://wa.me/21653052134" class="footer__social-link" aria-label="WhatsApp" target="_blank"
+          rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CHATBOT ========== -->
+  <div class="chatbot">
+    <div class="chatbot__window">
+      <div class="chatbot__header">
+        <div class="chatbot__status"></div>
+        <span class="chatbot__title">Innovatek AI Assistant</span>
+      </div>
+      <div class="chatbot__messages">
+        <!-- Messages will be injected here -->
+      </div>
+      <div class="chatbot__input-area">
+        <input type="text" class="chatbot__input" placeholder="Ask anything..." aria-label="Chat input">
+        <button class="chatbot__send" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button class="chatbot__toggle" aria-label="Open chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" aria-label="Back to top" data-i18n="aria_back_to_top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </button>
+
+</body>
+
+</html>

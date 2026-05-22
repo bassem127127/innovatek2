@@ -1,0 +1,105 @@
+/* ============================================
+   INNOVATEK — UI Components
+   ============================================ */
+
+/* --- Buttons --- */
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 16px 32px;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-spring);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Base Lift Effect */
+.btn-primary:hover,
+.btn-ghost:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary:active,
+.btn-ghost:active {
+  transform: translateY(-1px);
+}
+
+/* Primary Button: High-Tech Gradient */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 180, 216, 0.3),
+              var(--shadow-glow-blue);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 15px 35px -5px rgba(0, 180, 216, 0.5),
+              0 0 30px rgba(123, 47, 255, 0.4);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+/* Ghost Button: Glassmorphism */
+.btn-ghost {
+  background: rgba(241, 245, 249, 0.03);
+  color: var(--color-text-primary);
+  border: 1px solid rgba(241, 245, 249, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  background: rgba(241, 245, 249, 0.08);
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+/* Icon Animations */
+.btn-primary svg,
+.btn-ghost svg {
+  transition: transform var(--transition-spring);
+}
+
+.btn-primary:hover svg {
+  transform: translateX(5px);
+}
+
+.body--rtl .btn-primary:hover svg {
+  transform: translateX(-5px);
+}
+
+.btn-ghost:hover svg {
+  transform: scale(1.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+}

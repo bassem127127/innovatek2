@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://innovatek.netlify.app/sitemap.xml

@@ -1,0 +1,20 @@
+/* ============================================
+   INNOVATEK — Master Stylesheet
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+@import './variables.css';
+@import './components.css';
+@import './reset.css';
+@import './layout.css';
+@import './navigation.css';
+@import './hero.css';
+@import './services.css';
+@import './process.css';
+@import './about.css';
+@import './stack.css';
+@import './chatbot.css';
+@import './contact.css';
+@import './footer.css';
+@import './rtl.css';

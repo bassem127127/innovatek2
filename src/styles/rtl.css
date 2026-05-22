@@ -1,0 +1,82 @@
+/* ============================================
+   INNOVATEK — RTL (Arabic) Support
+   ============================================ */
+
+[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  text-align: right;
+}
+
+/* Logical properties handle most of the layout automatically.
+   These are specific overrides for elements that need specific visual flipping or rotation. */
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* --- Hero Redesign RTL --- */
+[dir="rtl"] .hero__content {
+  text-align: right;
+}
+
+/* --- About Redesign RTL --- */
+[dir="rtl"] .about__mission {
+  border-left: none;
+  border-right: 4px solid var(--color-accent-blue);
+  padding-left: 0;
+  padding-right: var(--space-xl);
+}
+
+[dir="rtl"] .about__dashboard-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .about__stat-info {
+  flex-direction: row-reverse;
+}
+
+/* --- Process Path RTL --- */
+[dir="rtl"] .process__item {
+  direction: rtl;
+}
+
+[dir="rtl"] .process__card {
+  text-align: right;
+}
+
+[dir="rtl"] .process__item--reverse .process__card {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .process__path::before {
+    left: auto;
+    right: 32px;
+  }
+  
+  [dir="rtl"] .process__item {
+    grid-template-columns: 1fr 80px;
+    direction: ltr; /* Keeps node on the correct side relative to the line */
+  }
+
+  [dir="rtl"] .process__node {
+    grid-column: 2;
+  }
+
+  [dir="rtl"] .process__card,
+  [dir="rtl"] .process__item--reverse .process__card {
+    grid-column: 1;
+    text-align: right;
+  }
+}
+
+/* --- Contact Redesign RTL --- */
+[dir="rtl"] .contact__detail {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* --- Navigation RTL --- */
+[dir="rtl"] .lang-switch {
+  flex-direction: row-reverse;
+}

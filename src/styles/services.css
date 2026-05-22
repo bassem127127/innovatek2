@@ -1,0 +1,155 @@
+/* ============================================
+   INNOVATEK — Data Panel Services
+   ============================================ */
+
+.services {
+  background: var(--color-bg-primary);
+  position: relative;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-xl);
+}
+
+/* --- Service Card (Data Panel) --- */
+.service-card {
+  grid-column: span 4;
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  --accent: var(--color-accent-blue);
+}
+
+/* Specific card accents for variety */
+.service-card:nth-child(2) { --accent: var(--color-accent-violet); }
+.service-card:nth-child(3) { --accent: var(--color-accent-emerald); }
+.service-card:nth-child(4) { --accent: var(--color-accent-coral); }
+.service-card:nth-child(5) { --accent: var(--color-accent-amber); }
+.service-card:nth-child(6) { --accent: var(--color-accent-cyan); }
+
+/* Industrial Corner Markers */
+.service-card::before,
+.service-card::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.3;
+  transition: all var(--transition-base);
+}
+
+.service-card::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.service-card::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+.service-card:hover {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: var(--accent);
+  box-shadow: 0 10px 40px -15px var(--accent);
+  transform: translateY(-5px);
+}
+
+.service-card:hover::before,
+.service-card:hover::after {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+}
+
+/* Header with priority/index */
+.service-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-xl);
+}
+
+.service-card__index {
+  font-family: monospace;
+  font-size: var(--text-xs);
+  color: var(--accent);
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.service-card__icon {
+  color: var(--accent);
+  background: transparent;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.service-card__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.service-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-md);
+  color: var(--color-text-primary);
+}
+
+.service-card__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+/* Data stats inside card */
+.service-card__stats {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px dashed rgba(148, 163, 184, 0.1);
+}
+
+.service-card__stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}
+
+.service-card__stat-value {
+  font-family: monospace;
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: var(--weight-bold);
+}
+
+/* Feature card spans more columns */
+.service-card--featured {
+  grid-column: span 8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .service-card { grid-column: span 6; }
+  .service-card--featured { grid-column: span 12; }
+}
+
+@media (max-width: 640px) {
+  .service-card { grid-column: span 12; }
+}
