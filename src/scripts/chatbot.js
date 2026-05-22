@@ -6,7 +6,7 @@ import { select } from './utils.js';
 
 const OPENROUTER_API_KEY = import.meta.env?.VITE_OPENROUTER_API_KEY || '';
 const CHAT_API_URL = import.meta.env?.VITE_CHAT_API_URL || null; // e.g. http://127.0.0.1:8787/api/chat
-const MODEL = 'openrouter/free'; // GPT-120B — primary model
+const MODEL = 'poolside/laguna-xs.2:free'; // GPT-120B — primary model
 
 export function initChatbot() {
   const chatbot = select('.chatbot');
