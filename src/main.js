@@ -2,6 +2,7 @@
    INNOVATEK — Main Entry Point
    ============================================ */
 
+import './styles/index.css';
 import { initNavigation } from './scripts/navigation.js';
 import { initParticles } from './scripts/particles.js';
 import { initAnimations } from './scripts/animations.js';
