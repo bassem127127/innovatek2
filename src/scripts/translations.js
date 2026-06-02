@@ -80,9 +80,9 @@ export const translations = {
     contact_success_text: "Merci de nous avoir contactés. Nous vous répondrons sous 24h.",
     aria_nav_toggle: "Basculer le menu",
     aria_back_to_top: "Retour en haut",
-    footer_copy: "© 2026 Innovatek 🇹🇳 Tous droits réservés.",
-    meta_title: "Innovatek — Solutions Informatiques & IA en Tunisie",
-    meta_description: "Entreprise informatique en Tunisie spécialisée dans le développement logiciel sur mesure, l'automatisation intelligente et les solutions d'intelligence artificielle.",
+    footer_copy: "© 2026 Innovatek Tunisia 🇹🇳 Tous droits réservés.",
+    meta_title: "Innovatek — Solutions Informatiques, IA & Automatisation en Tunisie",
+    meta_description: "Innovatek Tunisia : Leader en solutions informatiques, intelligence artificielle et automatisation de workflow en Tunisie. Boostez votre entreprise avec nos agents IA sur mesure.",
   },
   en: {
     nav_home: "Home",
@@ -165,9 +165,9 @@ export const translations = {
     contact_success_text: "Thank you for reaching out. We'll get back to you within 24 hours.",
     aria_nav_toggle: "Toggle menu",
     aria_back_to_top: "Back to top",
-    footer_copy: "© 2026 Innovatek 🇹🇳 All rights reserved.",
-    meta_title: "Innovatek — IT Solutions & AI Automation in Tunisia",
-    meta_description: "Leading IT solutions company in Tunisia. We specialize in custom software development, workflow automation, and intelligent AI applications.",
+    footer_copy: "© 2026 Innovatek Tunisia 🇹🇳 All rights reserved.",
+    meta_title: "Innovatek — Tech Solutions & AI Automation in Tunisia",
+    meta_description: "Innovatek Tunisia: Leading provider of tech solutions, AI automation, and intelligent agents in Tunisia. Empower your business with our custom software solutions.",
   },
   ar: {
     nav_home: "الرئيسية",
@@ -250,8 +250,9 @@ export const translations = {
     contact_success_text: "شكراً لتواصلك معنا. سنرد عليك في غضون 24 ساعة.",
     aria_nav_toggle: "تبديل القائمة",
     aria_back_to_top: "العودة للأعلى",
-    footer_copy: "© 2026 انوفاتيك 🇹🇳 جميع الحقوق محفوظة.",
-    meta_title: "انوفاتيك — حلول برمجية وتكنولوجية والذكاء الاصطناعي في تونس",
-    meta_description: "شركة حلول برمجية وتكنولوجية رائدة في تونس. متخصصون في تطوير البرمجيات المخصصة، أتمتة العمليات الذكية، وتطبيقات الذكاء الاصطناعي.",
+    footer_copy: "© 2026 انوفاتيك تونس 🇹🇳 جميع الحقوق محفوظة.",
+    meta_title: "انوفاتيك تونس — حلول تكنولوجية، ذكاء اصطناعي وأتمتة في تونس",
+    meta_description: "انوفاتيك تونس: الشركة الرائدة في الحلول التكنولوجية، الذكاء الاصطناعي وأتمتة سير العمل في تونس. عزز عملك مع وكلاء الذكاء الاصطناعي المخصصين لدينا.",
   }
+};
 };
