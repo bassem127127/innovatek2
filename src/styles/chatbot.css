@@ -7,7 +7,7 @@
   bottom: var(--space-xl);
   right: var(--space-xl);
   z-index: var(--z-modal);
-  display: flex;
+  display: none !important;
   flex-direction: column;
   align-items: flex-end;
   font-family: var(--font-body);
