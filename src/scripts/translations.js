@@ -50,7 +50,7 @@ export const translations = {
 
     about_label: "Pourquoi Innovatek",
     about_title: "Nous ne construisons pas seulement de l'IA — Nous bâtissons des résultats",
-    about_mission: "Chez Innovatek, l'IA est une infrastructure invisible. Notre mission est d'automatiser silencieusement pour que votre équipe se concentre sur l'essentiel.",
+    about_mission: "Chez Innovatek, l'IA est une infrastructure invisible. Notre mission est d'automatiser indépendamment pour que votre équipe se concentre sur l'essentiel.",
     about_pillar_1_title: "Vitesse",
     about_pillar_1_text: "Prototypage rapide et livraison agile. Nous avançons vite sans compromettre la qualité.",
     about_pillar_2_title: "Intelligence",
@@ -181,7 +181,7 @@ export const translations = {
     hero_title_1: "أتمتة.",
     hero_title_2: "تسريع.",
     hero_title_3: "سيادة.",
-    hero_subtitle: "نحن نبني أنظمة أتمتة ذكية وتطبيقات مدعومة بالذكاء الاصطناعي تغني عن العمل اليدوي، وتقلل التكاليف، وتفتح آفاق نمو هائل لعملك.",
+    hero_subtitle: "نحن نبني أنظمة أتمتة ذكية وتطبيقات مدعومة بالذكاء الاصطناعي تغني عن العمل اليدوي، وتقلل التكاليف وتطلق النمو الهندسي لعملك.",
     hero_tag_1: "وكلاء ذكاء اصطناعي",
     hero_tag_2: "سير عمل ذكي",
     hero_tag_3: "أتمتة",
@@ -191,7 +191,7 @@ export const translations = {
 
     services_label: "ماذا نفعل",
     services_title: "حلول ذكية للشركات الحديثة",
-    services_desc: "نجمع بين أحدث تقنيات الذكاء الاصطناعي والخبرة العميقة في الصناعة لتقديم حلول أتمتة ذات أثر حقيقي وقابل للقياس.",
+    services_desc: "نجمع بين أحدث تقنيات الذكاء الاصطناعي والخبرة العميقة في الصناعة لتقديم حلول أتمتة ذات أثر حقيقي.",
 
     service_1_title: "أتمتة سير العمل بالذكاء الاصطناعي",
     service_1_desc: "أتمتة شاملة لعمليات الأعمال المتكررة، من إدخال البيانات إلى سلاسل القرار المعقدة.",
@@ -220,7 +220,7 @@ export const translations = {
 
     about_label: "لماذا انوفاتيك",
     about_title: "نحن لا نبني ذكاءً اصطناعياً فحسب - بل نبني نتائج",
-    about_mission: "في انوفاتيك، نؤمن أن الذكاء الاصطناعي يجب أن يكون بنية تحتية غير مرئية. مهمتنا هي تقديم أتمتة تعمل بهدوء في الخلفية.",
+    about_mission: "في انوفاتيك، نؤمن أن الذكاء الاصطناعي يجب أن يكون بنية تحتية غير مرئية. مهمتنا هي تقديم أتمتة تعمل بشكل مستقل حتى تتمكن فرقك من التركيز على ما هو مهم.",
     about_pillar_1_title: "السرعة",
     about_pillar_1_text: "نماذج أولية سريعة وتسليم مرن. نتحرك بسرعة دون الإخلال بالجودة.",
     about_pillar_2_title: "الذكاء",
@@ -252,6 +252,6 @@ export const translations = {
     aria_back_to_top: "العودة للأعلى",
     footer_copy: "© 2026 انوفاتيك تونس 🇹🇳 جميع الحقوق محفوظة.",
     meta_title: "انوفاتيك تونس — حلول تكنولوجية، ذكاء اصطناعي وأتمتة في تونس",
-    meta_description: "انوفاتيك تونس: الشركة الرائدة في الحلول التكنولوجية، الذكاء الاصطناعي وأتمتة سير العمل في تونس. عزز عملك مع وكلاء الذكاء الاصطناعي المخصصين لدينا.",
+    meta_description: "انوفاتيك تونس: الشركة الرائدة في الحلول التكنولوجية، الذكاء الاصطناعي وأتمتة سير العمل في تونس.",
   }
 };
